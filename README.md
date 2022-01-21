@@ -2,7 +2,8 @@
 
 ## Besoins
 
-* [Node.js](http://nodejs.org/)
+* [Node.js](https://nodejs.org/en/)
+* [React](https://fr.reactjs.org/)
 
 ## Étape d'utilisation
 ## Sans API
