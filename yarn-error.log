@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\falco\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add stripe
+  C:\Program Files\nodejs\node.exe C:\Users\falco\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add stripe-js
 
 PATH: 
-  C:\Users\falco\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\falco\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Program Files\Go\bin;C:\Program Files\Symfony;E:\laragon\bin\php\php-7.4.19-Win32-vc15-x64;C:\composer;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\TDM-GCC-64\bin;C:\Users\falco\bin\wp;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\falco\AppData\Roaming\npm;C:\Program Files\nodejs;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Program Files\Go\bin;C:\Program Files\Symfony;E:\laragon\bin\php\php-7.4.19-Win32-vc15-x64;C:\composer;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\TDM-GCC-64\bin;C:\Users\falco\bin\wp;C:\Users\falco\AppData\Local\Microsoft\WindowsApps;C:\Users\falco\AppData\Roaming\npm;C:\Users\falco\go\bin;C:\Users\falco\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\falco\AppData\Roaming\Composer\vendor\bin;C:\wp-cli;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\falco\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Program Files\Go\bin;C:\Program Files\Symfony;E:\laragon\bin\php\php-7.4.19-Win32-vc15-x64;C:\composer;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\TDM-GCC-64\bin;C:\Users\falco\bin\wp;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\falco\AppData\Roaming\npm;C:\Program Files\nodejs;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Program Files\Go\bin;C:\Program Files\Symfony;E:\laragon\bin\php\php-7.4.19-Win32-vc15-x64;C:\composer;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\TDM-GCC-64\bin;C:\Users\falco\bin\wp;C:\Users\falco\AppData\Local\Microsoft\WindowsApps;C:\Users\falco\AppData\Roaming\npm;C:\Users\falco\go\bin;C:\Users\falco\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\falco\AppData\Roaming\Composer\vendor\bin;C:\wp-cli
 
 Yarn version: 
   1.22.17
@@ -14,7 +14,17 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'E:\laragon\www\ecommerce-v.2\node_modules\.bin\json-server-auth'
+  Error: https://registry.yarnpkg.com/stripe-js: Not found
+      at Request.params.callback [as _callback] (C:\Users\falco\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:67029:18)
+      at Request.self.callback (C:\Users\falco\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140883:22)
+      at Request.emit (node:events:390:28)
+      at Request.<anonymous> (C:\Users\falco\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141855:10)
+      at Request.emit (node:events:390:28)
+      at IncomingMessage.<anonymous> (C:\Users\falco\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141777:12)
+      at Object.onceWrapper (node:events:509:28)
+      at IncomingMessage.emit (node:events:402:35)
+      at endReadableNT (node:internal/streams/readable:1343:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
 
 npm manifest: 
   {
@@ -27,13 +37,16 @@ npm manifest:
       "@testing-library/user-event": "^7.1.2",
       "axios": "^0.20.0",
       "bulma": "^0.9.1",
+      "express": "^4.17.2",
       "json-server": "^0.16.2",
       "json-server-auth": "^2.0.2",
       "jwt-decode": "^3.0.0",
+      "prop-types": "^15.8.1",
       "react": "^16.13.1",
       "react-dom": "^16.13.1",
       "react-router-dom": "^5.2.0",
       "react-scripts": "3.4.3",
+      "stripe": "^8.199.0",
       "typescript": "^4.5.5"
     },
     "scripts": {
@@ -1730,7 +1743,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.5.tgz#1001cc5e6a3704b83c236027e77f2f58ea010f40"
     integrity sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==
   
-  "@types/node@*":
+  "@types/node@*", "@types/node@>=8.1.0":
     version "17.0.10"
     resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.10.tgz#616f16e9d3a2a3d618136b1be244315d95bd7cab"
     integrity sha512-S/3xB4KzyFxYGCppyDt68yzBU9ysL88lSdIah4D6cptdcltc4NCPCAMc0+PCpg/lLIyC7IPvj2Z52OJWeIUkog==
@@ -4770,7 +4783,7 @@ Lockfile:
       debug "*"
       path-to-regexp "^1.0.3"
   
-  express@^4.17.1:
+  express@^4.17.1, express@^4.17.2:
     version "4.17.2"
     resolved "https://registry.yarnpkg.com/express/-/express-4.17.2.tgz#c18369f265297319beed4e5558753cc8c1364cb3"
     integrity sha512-oxlxJxcQlYwqPWKVJJtvQiwHgosH/LrLSPA+H4UxpyvSS6jC5aH+5MoHFM+KABgTOt0APue4w66Ha8jCUo9QGg==
@@ -9245,7 +9258,7 @@ Lockfile:
       kleur "^3.0.3"
       sisteransi "^1.0.5"
   
-  prop-types@^15.6.2, prop-types@^15.7.2:
+  prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
     version "15.8.1"
     resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
     integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -9340,6 +9353,13 @@ Lockfile:
     version "6.9.6"
     resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.6.tgz#26ed3c8243a431b2924aca84cc90471f35d5a0ee"
     integrity sha512-TIRk4aqYLNoJUbd+g2lEdz5kLWIuTMRagAXxl78Q0RiVjAOugHmeKNGdd3cwo/ktpf9aL9epCfFqWDEKysUlLQ==
+  
+  qs@^6.6.0:
+    version "6.10.3"
+    resolved "https://registry.yarnpkg.com/qs/-/qs-6.10.3.tgz#d6cde1b2ffca87b5aa57889816c5f81535e22e8e"
+    integrity sha512-wr7M2E0OFRfIfJZjKGieI8lBKb7fRCH4Fv5KNPEs7gJ8jadvotdsS08PzOKR7opXhZ/Xkjtt3WF9g38drmyRqQ==
+    dependencies:
+      side-channel "^1.0.4"
   
   qs@~6.5.2:
     version "6.5.3"
@@ -10767,6 +10787,14 @@ Lockfile:
     version "2.0.1"
     resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
     integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
+  
+  stripe@^8.199.0:
+    version "8.199.0"
+    resolved "https://registry.yarnpkg.com/stripe/-/stripe-8.199.0.tgz#dcd109f16ff0c33da638a0d154c966d0f20c73d1"
+    integrity sha512-Bc5Zfp6eOOCdde9x5NPrAczeGSKuNwemzjsfGJXWtpbUfQXgJujzTGgkhx2YuzamqakDYJkTgf9w7Ry2uY8QNA==
+    dependencies:
+      "@types/node" ">=8.1.0"
+      qs "^6.6.0"
   
   style-loader@0.23.1:
     version "0.23.1"

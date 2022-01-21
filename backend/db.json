@@ -13,9 +13,9 @@
   ],
   "meubles": [
     {
-      "meubleId": "hdmdu0t80yjkfqselfc",
+      "id": "hdmdu0t80yjkfqselfc",
       "meubleName": "abajour",
-      "meubleStock": 10,
+      "meubleStock": 16,
       "meublePrix": 14.99,
       "meubleInfo": "Abajour en bois massif, taillé par un artisan Normand pendant 1 mois. Il résiste au froid et au chaud et peut donc être exposé dans n'importe qu'elle pièce de la maison.",
       "meubleShortInfo": "Abajour, pratique pour poser des trucs",
@@ -24,7 +24,7 @@
     {
       "id": "lvv9n8qdg1lkyourisx",
       "meubleName": "Lit",
-      "meubleStock": "1",
+      "meubleStock": 1,
       "meublePrix": "253.85",
       "meubleInfo": "",
       "meubleShortInfo": "Pratique pour dormir",
@@ -33,7 +33,7 @@
     {
       "id": "mth38437vzlkyoutrkh",
       "meubleName": "Bar",
-      "meubleStock": "0",
+      "meubleStock": 0,
       "meublePrix": "326.85",
       "meubleInfo": "",
       "meubleShortInfo": "Sert pour faire à manger",
@@ -42,7 +42,7 @@
     {
       "id": "6c75bmq84kfkyov7f15",
       "meubleName": "Kallax",
-      "meubleStock": "8",
+      "meubleStock": 9,
       "meublePrix": "60.48",
       "meubleInfo": "",
       "meubleShortInfo": "Pratique pour ranger",

@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.qty_container {
+  right: 1%;
+  bottom: -12%;
+  position: absolute;
+}
+.qty_container label {
+  margin-right: 1vw;
+}
+.qty_container input {
+  width: 45px;
+  border: none;
+  background: white;
+  border-radius: 2px;
+  box-shadow: 0px 0px 4px -1px grey;
+  line-height: 2em;
+}
+.media {
+  position: relative;
+}

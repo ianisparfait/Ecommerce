@@ -30,6 +30,10 @@ const CartItem = props => {
           >
             <span className="delete is-large"></span>
           </div>
+          <div className="qty_container">
+            <label for="qty">Quantités</label>
+            <input type="number" id="qty" placeholder="1" min="1" step="1" />
+          </div>
         </div>
       </div>
     </div>
