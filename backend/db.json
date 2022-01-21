@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "email": "regular@example.com",
+      "password": "$2a$10$2myKMolZJoH.q.cyXClQXufY1Mc7ETKdSaQQCC6Fgtbe0DCXRBELG",
+      "id": 1
+    },
+    {
+      "email": "admin@example.com",
+      "password": "$2a$10$w8qB40MdYkMs3dgGGf0Pu.xxVOOzWdZ5/Nrkleo3Gqc88PF/OQhOG",
+      "id": 2
+    }
+  ],
+  "meubles": [
+    {
+      "meubleId": "hdmdu0t80yjkfqselfc",
+      "meubleName": "abajour",
+      "meubleStock": 10,
+      "meublePrix": 14.99,
+      "meubleInfo": "Abajour en bois massif, taillé par un artisan Normand pendant 1 mois. Il résiste au froid et au chaud et peut donc être exposé dans n'importe qu'elle pièce de la maison.",
+      "meubleShortInfo": "Abajour, pratique pour poser des trucs",
+      "meubleType": "Abajour"
+    },
+    {
+      "id": "lvv9n8qdg1lkyourisx",
+      "meubleName": "Lit",
+      "meubleStock": "1",
+      "meublePrix": "253.85",
+      "meubleInfo": "",
+      "meubleShortInfo": "Pratique pour dormir",
+      "meubleType": "Lit"
+    },
+    {
+      "id": "mth38437vzlkyoutrkh",
+      "meubleName": "Bar",
+      "meubleStock": "0",
+      "meublePrix": "326.85",
+      "meubleInfo": "",
+      "meubleShortInfo": "Sert pour faire à manger",
+      "meubleType": "Meuble de cuisine"
+    },
+    {
+      "id": "6c75bmq84kfkyov7f15",
+      "meubleName": "Kallax",
+      "meubleStock": "8",
+      "meublePrix": "60.48",
+      "meubleInfo": "",
+      "meubleShortInfo": "Pratique pour ranger",
+      "meubleType": "Kallax"
+    }
+  ]
+}
