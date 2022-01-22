@@ -47,6 +47,15 @@
       "meubleInfo": "",
       "meubleShortInfo": "Pratique pour ranger",
       "meubleType": "Kallax"
+    },
+    {
+      "id": "s6t4ztumc4kyq4kued",
+      "meubleName": "test grid",
+      "meubleStock": "56",
+      "meublePrix": "12",
+      "meubleInfo": "",
+      "meubleShortInfo": "C'est pour tester",
+      "meubleType": "cuisine"
     }
   ]
 }

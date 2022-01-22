@@ -9,6 +9,7 @@ import Login from './components/Login';
 import ProductList from './components/ProductList';
 import Success from './components/Success';
 import Cancel from './components/Cancel';
+import Account from './components/Account';
 
 import Context from "./Context";
 
@@ -18,9 +19,12 @@ export default class App extends Component {
     this.state = {
       user: null,
       cart: {},
-      meubles: []
+      meubles: [],
+      productsInCart: null
     };
     this.routerRef = React.createRef();
+
+    this.numberCartItems = 0;
   }
 
   async componentDidMount() {
@@ -101,34 +105,26 @@ export default class App extends Component {
     if (!this.state.user) {
       this.routerRef.current.history.push("/login");
       return;
-    } else {
-      console.log(this.state.meubles)
-      var cart = this.state.cart;
-      var meubles = this.state.meubles.map((m) => {
-        m.meubleStock = m.meubleStock - 1;
-
-        axios.put(`http://localhost:3001/meubles/${m.id}`, {...m})
-
-        return m;
-      })
     }
 
+    const cart = this.state.cart;
 
-    // const meubles = this.state.meubles.map(p => {
-    //   if (cart[p.maubleName]) {
-    //     p.meubleStock = p.meubleStock - cart[p.maubleName].amount;
+    const meubles = this.state.meubles.map(p => {
+      if (cart[p.name]) {
+        p.stock = p.stock - cart[p.name].amount;
 
-    //     axios.put(
-    //       `${this.domainName}:${this.port}/meubles/${p.id}`,
-    //       { ...p },
-    //     )
-    //   }
-    //   return p;
-    // });
+        axios.put(`http://localhost:3001/meubles/${p.id}`,{ ...p })
+      }
+      return p;
+    });
 
     this.setState({ meubles });
-    // this.clearCart();
+    this.clearCart();
   };
+
+  getUser = () => (
+    console.log(this.state.user)
+  );
 
   render() {
     return (
@@ -185,7 +181,7 @@ export default class App extends Component {
                     className="tag is-primary"
                     style={{ marginLeft: "5px" }}
                   >
-                    { Object.keys(this.state.cart).length }
+                    {Object.keys(this.state.cart).length}
                   </span>
                 </Link>
                 {!this.state.user ? (
@@ -197,6 +193,11 @@ export default class App extends Component {
                     Déconnexion
                   </Link>
                 )}
+                {this.state.user &&
+                  <Link to="/account" className="navbar-item">
+                    Compte
+                  </Link>
+                }
               </div>
             </nav>
             <Switch>
@@ -207,6 +208,7 @@ export default class App extends Component {
               <Route exact path="/meubles" component={ProductList} />
               <Route exact path="/success-cart" component={Success} />
               <Route exact path="/cancel-cart" component={Cancel} />
+              <Route exact path="/account" component={Account} />
             </Switch>
           </div>
         </Router>

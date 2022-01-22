@@ -19,8 +19,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-stripe": "^0.1.0",
-    "stripe": "^8.199.0",
-    "typescript": "^4.5.5"
+    "stripe": "^8.199.0"
   },
   "scripts": {
     "start": "react-scripts start",

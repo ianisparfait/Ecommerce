@@ -4,6 +4,7 @@ const CartItem = props => {
   const { cartItem, cartKey } = props;
 
   const { meuble, amount } = cartItem;
+
   return (
     <div className=" column is-half">
       <div className="box">
@@ -22,17 +23,13 @@ const CartItem = props => {
               <span className="tag is-primary">${meuble.meublePrix}</span>
             </b>
             <div>{meuble.meubleShortInfo}</div>
-            <small>{`${amount} in cart`}</small>
+            <span className="has-text-primary">{amount < 2 ? (`${amount} article dans le panier`) : (`${amount} articles dans le panier`)}</span>
           </div>
           <div
             className="media-right"
             onClick={() => props.removeFromCart(cartKey)}
           >
             <span className="delete is-large"></span>
-          </div>
-          <div className="qty_container">
-            <label for="qty">Quantités</label>
-            <input type="number" id="qty" placeholder="1" min="1" step="1" />
           </div>
         </div>
       </div>
