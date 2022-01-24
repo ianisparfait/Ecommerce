@@ -14,8 +14,8 @@
 4. Se rendre sur [http://localhost:3000/](http://localhost:3000/)  
 
 Pour se connecter:  
-      Email: `regular@example.com` ou `admin@example.com`  
-      Mot de passe: `password`
+      - Email: `regular@example.com` ou `admin@example.com`  
+      - Mot de passe: `password`
 
 ## Avec API
 1. Run `npm install`
