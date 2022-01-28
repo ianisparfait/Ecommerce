@@ -1,10 +1,26 @@
 import React from "react";
 import withContext from "../withContext";
 import CartItem from "./CartItem";
+import Stripe from './Stripe';
 
 const Cart = props => {
   const { cart } = props.context;
   const cartKeys = Object.keys(cart || {});
+
+  const totalPrice = () => {
+    let c = cart
+    let total = 0;
+    for (let x in c) {
+      let obj = c[x]
+      for (let key in obj) {
+        if (obj[key].meublePrix !== undefined || obj[key].meublePrix !== null) {
+          total = total + parseFloat(obj[key].meublePrix)
+        }
+      }
+    }
+    return total
+  };
+
   return (
     <>
       <div className="hero is-primary">
@@ -33,13 +49,9 @@ const Cart = props => {
                 >
                   Effacer le panier
                 </button>{" "}
-                <button
-                  className="button is-success"
-                  onClick={props.context.checkout}
-                >
-                  Accéder au paiement
-                </button>
+                <Stripe price={totalPrice()} />
               </div>
+              <span>Prix total de la commande: {parseFloat(totalPrice().toFixed(2))}€</span>
             </div>
           </div>
         ) : (

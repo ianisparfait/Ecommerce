@@ -117,7 +117,7 @@ export default class App extends Component {
 
         axios.put(`http://localhost:3001/meubles/${p.id}`,{ ...p })
       }
-      return (p && <Stripe price={p.meublePrix} />);
+      return p;
     });
 
     this.setState({ meubles });
@@ -211,6 +211,7 @@ export default class App extends Component {
               <Route exact path="/success-cart" component={Success} />
               <Route exact path="/cancel-cart" component={Cancel} />
               <Route exact path="/account" component={Account} />
+              <Route exact path="/checkout" component={Stripe} />
             </Switch>
           </div>
         </Router>
