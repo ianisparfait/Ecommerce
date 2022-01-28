@@ -3,8 +3,10 @@ import withContext from "../withContext";
 
 
 const Account = props => {
-  // const { email } = props.context;
-  return(
+  const { user } = props.context;
+  const userKeys = new Map(Object.entries(user || {}));
+
+  return (
     <>
     <div className="hero is-primary">
         <div className="hero-body container">
@@ -15,7 +17,7 @@ const Account = props => {
 
       <div className="column">
         <span className="title has-text-grey-light">
-          {props.context.getUser}
+          {userKeys.get('email')}
         </span>
       </div>
     </>

@@ -123,7 +123,7 @@ export default class App extends Component {
   };
 
   getUser = () => (
-    console.log(this.state.user)
+    this.state.user
   );
 
   render() {
