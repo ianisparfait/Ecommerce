@@ -20,6 +20,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "5.0.0",
     "react-stripe": "^0.1.0",
+    "react-stripe-checkout": "^2.6.3",
     "stripe": "^8.200.0",
     "yarn-upgrade-all": "^0.6.1"
   },
