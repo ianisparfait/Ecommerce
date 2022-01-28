@@ -1,25 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from 'axios';
 import withContext from "../withContext";
 import CartItem from "./CartItem";
 import Stripe from './Stripe';
 
 const Cart = props => {
+  const [promo, setPromo] = useState('');
+  const [tPrice, setTPrice] = useState(0);
+
   const { cart } = props.context;
   const cartKeys = Object.keys(cart || {});
 
-  const totalPrice = () => {
+  const totalPrice = (pr) => {
     let c = cart
     let total = 0;
     for (let x in c) {
       let obj = c[x]
       for (let key in obj) {
-        if (obj[key].meublePrix !== undefined || obj[key].meublePrix !== null) {
+        if (obj[key].meublePrix != undefined || obj[key].meublePrix != null) {
           total = total + parseFloat(obj[key].meublePrix)
         }
       }
     }
-    return total
+    return reduc(pr, total)
   };
+
+  async function setCouponPromo() {
+    const getCodes = await axios.get(`http://localhost:3001/promos`),
+          arrayOfCodes = getCodes.data;
+
+    for (let index = 0; index < arrayOfCodes.length; index++) {
+      if (arrayOfCodes[index].code === promo) {
+        alert(`le code de - ${arrayOfCodes[index].reduction}% est appliqué`)
+        return setTPrice(totalPrice(arrayOfCodes[index].reduction)) ;
+      }
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    setPromo(e.target.value)
+  };
+
+  const reduc = (pr, price) => {
+    if (pr != undefined) {
+      let mult = price * pr,
+      div = mult / 100
+
+      return parseFloat((price - div).toFixed(2))
+    } else {
+      return price
+    }
+  }
+
 
   return (
     <>
@@ -49,9 +81,16 @@ const Cart = props => {
                 >
                   Effacer le panier
                 </button>{" "}
-                <Stripe price={totalPrice()} />
+                <Stripe price={tPrice == 0 ? totalPrice() : tPrice} />
               </div>
-              <span>Prix total de la commande: {parseFloat(totalPrice().toFixed(2))}€</span>
+              <span>Prix total de la commande: {tPrice == 0 ? totalPrice() : tPrice}€</span>
+            </div>
+            <div className="column is-12 is-clearfix">
+              <div className="column is-3 is-offset-9">
+                <label>Code de réduction</label>
+                <input className="input" type="text" placeholder="Entrez un code promotionel" onKeyUp={(e) => {handleKeyDown(e)}}/>
+                <button className="button" onClick={() => {setCouponPromo()}}>Appliquer le coupon</button>
+              </div>
             </div>
           </div>
         ) : (

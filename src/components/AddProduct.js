@@ -6,7 +6,7 @@ import axios from 'axios';
 const initState = {
   meubleName: "",
   meubleStock: "",
-  meublePrix: "",
+  meublePrix: 0,
   meubleInfo: "",
   meubleShortInfo: "",
   meubleType: ""

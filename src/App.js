@@ -22,7 +22,8 @@ export default class App extends Component {
       user: null,
       cart: {},
       meubles: [],
-      productsInCart: null
+      productsInCart: null,
+      promos: []
     };
     this.routerRef = React.createRef();
 
@@ -34,10 +35,11 @@ export default class App extends Component {
     let cart = localStorage.getItem("cart");
 
     const meubles = await axios.get(`http://localhost:3001/meubles`);
+    const promos = await axios.get(`http://localhost:3001/promos`)
     user = user ? JSON.parse(user) : null;
     cart = cart? JSON.parse(cart) : {};
 
-    this.setState({ user,  meubles: meubles.data, cart });
+    this.setState({ user,  meubles: meubles.data, promos: promos.data, cart });
   }
 
   login = async (email, password) => {

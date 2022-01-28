@@ -13,76 +13,63 @@
   ],
   "meubles": [
     {
-      "id": "hdmdu0t80yjkfqselfc",
-      "meubleName": "abajour",
-      "meubleStock": 19,
-      "meublePrix": 14.99,
-      "meubleInfo": "Abajour en bois massif, taillé par un artisan Normand pendant 1 mois. Il résiste au froid et au chaud et peut donc être exposé dans n'importe qu'elle pièce de la maison.",
-      "meubleShortInfo": "Abajour, pratique pour poser des trucs",
-      "meubleType": "Abajour"
-    },
-    {
-      "id": "lvv9n8qdg1lkyourisx",
+      "id": "yfdv31sgjeikyyhdizq",
       "meubleName": "Lit",
-      "meubleStock": 1,
-      "meublePrix": "253.85",
+      "meubleStock": "2",
+      "meublePrix": "359.56",
       "meubleInfo": "",
       "meubleShortInfo": "Pratique pour dormir",
-      "meubleType": "Lit"
+      "meubleType": ""
     },
     {
-      "id": "mth38437vzlkyoutrkh",
-      "meubleName": "Bar",
-      "meubleStock": 0,
-      "meublePrix": "326.85",
+      "id": "d680gkfik5gkyyhdxlq",
+      "meubleName": "Abajour",
+      "meubleStock": "89",
+      "meublePrix": "37.38",
       "meubleInfo": "",
-      "meubleShortInfo": "Sert pour faire à manger",
-      "meubleType": "Meuble de cuisine"
+      "meubleShortInfo": "Pratique pour poser des trucs",
+      "meubleType": ""
     },
     {
-      "id": "6c75bmq84kfkyov7f15",
+      "id": "sla407he9agkyyheaoj",
       "meubleName": "Kallax",
-      "meubleStock": 9,
-      "meublePrix": "60.48",
+      "meubleStock": "24",
+      "meublePrix": "9.89",
       "meubleInfo": "",
       "meubleShortInfo": "Pratique pour ranger",
-      "meubleType": "Kallax"
+      "meubleType": ""
     },
     {
-      "id": "s6t4ztumc4kyq4kued",
-      "meubleName": "test grid",
-      "meubleStock": "56",
-      "meublePrix": "12",
+      "id": "o27hlxkkp5kyyhes43",
+      "meubleName": "Table basse",
+      "meubleStock": "0",
+      "meublePrix": "249.25",
       "meubleInfo": "",
-      "meubleShortInfo": "C'est pour tester",
-      "meubleType": "cuisine"
+      "meubleShortInfo": "Pratique pour devant la télé",
+      "meubleType": ""
     },
     {
-      "id": "wx2ihfn10bkyy7ombw",
-      "meubleName": "testet",
-      "meubleStock": "15",
-      "meublePrix": "12",
-      "meubleInfo": "sdf",
-      "meubleShortInfo": "s",
-      "meubleType": "dfg"
+      "id": "wd96laijjkgkyyhfbxl",
+      "meubleName": "Meuble télévision",
+      "meubleStock": "8",
+      "meublePrix": "49.70",
+      "meubleInfo": "",
+      "meubleShortInfo": "Pratique pour la télé",
+      "meubleType": ""
+    }
+  ],
+  "promos": [
+    {
+      "id":1,
+      "code": "PROUTCUL",
+      "numberMax": 5,
+      "reduction": "5"
     },
     {
-      "id": "x5v2nnrw14kyy7ssv0",
-      "meubleName": "marco",
-      "meubleStock": "2",
-      "meublePrix": "120",
-      "meubleInfo": "sf",
-      "meubleShortInfo": "sdf",
-      "meubleType": "sdg"
-    },
-    {
-      "id": "vk0miatpr79kyya0591",
-      "meubleName": "produit",
-      "meubleStock": "3",
-      "meublePrix": "455",
-      "meubleInfo": "sf",
-      "meubleShortInfo": "sf",
-      "meubleType": "sdf"
+      "id":2,
+      "code": "SECOND",
+      "numberMax": 2,
+      "reduction": "12"
     }
   ]
 }
