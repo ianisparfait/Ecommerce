@@ -56,17 +56,26 @@
       "meubleInfo": "",
       "meubleShortInfo": "Pratique pour la télé",
       "meubleType": ""
+    },
+    {
+      "id": "taxy3xeburkyymn5ap",
+      "meubleName": "ajoutzoruifh",
+      "meubleStock": "15",
+      "meublePrix": "12",
+      "meubleInfo": "sdfg",
+      "meubleShortInfo": "sf",
+      "meubleType": "sdf"
     }
   ],
   "promos": [
     {
-      "id":1,
+      "id": 1,
       "code": "PROUTCUL",
       "numberMax": 5,
       "reduction": "5"
     },
     {
-      "id":2,
+      "id": 2,
       "code": "SECOND",
       "numberMax": 2,
       "reduction": "12"
