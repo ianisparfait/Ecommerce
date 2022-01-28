@@ -20,7 +20,7 @@ const CartItem = props => {
           <div className="media-content">
             <b style={{ textTransform: "capitalize" }}>
               {meuble.meubleName}{" "}
-              <span className="tag is-primary">${meuble.meublePrix}</span>
+              <span className="tag is-primary">{meuble.meublePrix}€</span>
             </b>
             <div>{meuble.meubleShortInfo}</div>
             <span className="has-text-primary">{amount < 2 ? (`${amount} article dans le panier`) : (`${amount} articles dans le panier`)}</span>

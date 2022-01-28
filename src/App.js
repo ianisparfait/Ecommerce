@@ -10,6 +10,7 @@ import ProductList from './components/ProductList';
 import Success from './components/Success';
 import Cancel from './components/Cancel';
 import Account from './components/Account';
+import Stripe from './components/Stripe';
 
 import Context from "./Context";
 
@@ -107,19 +108,21 @@ export default class App extends Component {
       return;
     }
 
-    const cart = this.state.cart;
+    // const cart = this.state.cart;
 
-    const meubles = this.state.meubles.map(p => {
-      if (cart[p.name]) {
-        p.stock = p.stock - cart[p.name].amount;
+    // const meubles = this.state.meubles.map(p => {
+    //   if (cart[p.name]) {
+    //     p.stock = p.stock - cart[p.name].amount;
 
-        axios.put(`http://localhost:3001/meubles/${p.id}`,{ ...p })
-      }
-      return p;
-    });
+    //     axios.put(`http://localhost:3001/meubles/${p.id}`,{ ...p })
+    //   }
+    //   return p;
+    // });
 
-    this.setState({ meubles });
-    this.clearCart();
+    <Stripe />
+
+    // this.setState({ meubles });
+    // this.clearCart();
   };
 
   getUser = () => (

@@ -56,6 +56,33 @@
       "meubleInfo": "",
       "meubleShortInfo": "C'est pour tester",
       "meubleType": "cuisine"
+    },
+    {
+      "id": "wx2ihfn10bkyy7ombw",
+      "meubleName": "testet",
+      "meubleStock": "15",
+      "meublePrix": "12",
+      "meubleInfo": "sdf",
+      "meubleShortInfo": "s",
+      "meubleType": "dfg"
+    },
+    {
+      "id": "x5v2nnrw14kyy7ssv0",
+      "meubleName": "marco",
+      "meubleStock": "2",
+      "meublePrix": "120",
+      "meubleInfo": "sf",
+      "meubleShortInfo": "sdf",
+      "meubleType": "sdg"
+    },
+    {
+      "id": "vk0miatpr79kyya0591",
+      "meubleName": "produit",
+      "meubleStock": "3",
+      "meublePrix": "455",
+      "meubleInfo": "sf",
+      "meubleShortInfo": "sf",
+      "meubleType": "sdf"
     }
   ]
 }
