@@ -80,5 +80,23 @@
       "numberMax": 2,
       "reduction": "12"
     }
+  ],
+  "commandes": [
+    {
+      "id": 1,
+      "user_mail": "parfait.ianis@gmail.com",
+      "user_name": "ianis",
+      "type": "card",
+      "transaction_id": "tok_1KNvhAKyFYzC5CCaXAhWwwxz",
+      "card_id": "card_1KNvhAKyFYzC5CCa0eFh8P2C",
+      "coutry": "France",
+      "city": "Aix-en-Provence",
+      "zip_code": "13100",
+      "adresse": "3 avenue des tamaris",
+      "amount": "37.38",
+      "id_products": [
+        "d680gkfik5gkyyhdxlq"
+      ]
+    }
   ]
 }

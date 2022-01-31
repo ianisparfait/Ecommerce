@@ -10,6 +10,7 @@ import ProductList from './components/ProductList';
 import Success from './components/Success';
 import Cancel from './components/Cancel';
 import Account from './components/Account';
+import Commandes from './components/Commandes';
 
 import Stripe from './components/Stripe';
 
@@ -23,7 +24,8 @@ export default class App extends Component {
       cart: {},
       meubles: [],
       productsInCart: null,
-      promos: []
+      promos: [],
+      commandes: [],
     };
     this.routerRef = React.createRef();
 
@@ -36,10 +38,11 @@ export default class App extends Component {
 
     const meubles = await axios.get(`http://localhost:3001/meubles`);
     const promos = await axios.get(`http://localhost:3001/promos`)
+    const commandes = await axios.get(`http://localhost:3001/commandes`)
     user = user ? JSON.parse(user) : null;
     cart = cart? JSON.parse(cart) : {};
 
-    this.setState({ user,  meubles: meubles.data, promos: promos.data, cart });
+    this.setState({ user,  meubles: meubles.data, promos: promos.data, commandes: commandes.data, cart });
   }
 
   login = async (email, password) => {
@@ -179,6 +182,11 @@ export default class App extends Component {
                     Ajouter un produit
                   </Link>
                 )}
+                {this.state.user && this.state.user.accessLevel < 1 && (
+                  <Link to="/commandes" className="navbar-item">
+                    Commandes
+                  </Link>
+                )}
                 <Link to="/cart" className="navbar-item">
                   Panier
                   <span
@@ -214,6 +222,7 @@ export default class App extends Component {
               <Route exact path="/cancel-cart" component={Cancel} />
               <Route exact path="/account" component={Account} />
               <Route exact path="/checkout" component={Stripe} />
+              <Route exact path="/commandes" component={Commandes} />
             </Switch>
           </div>
         </Router>
