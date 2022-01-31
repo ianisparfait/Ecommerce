@@ -1,10 +1,13 @@
+import axios from "axios";
 import React from "react";
 import withContext from "../withContext";
 
 const Commandes = props => {
   const { commandes } = props.context;
   const commandesKeys = Object.keys(commandes || {});
-  console.log(commandes, commandesKeys)
+
+  console.log(commandes)
+
   return (
     <>
       <div className="hero is-primary">
@@ -16,38 +19,40 @@ const Commandes = props => {
       <div className="container">
         <table className="table is-bordered is-striped" style={{textAlign: "center"}}>
           <thead>
-            {commandes.map(c => {
+            <tr>
+              <th>Id commande</th>
+              <th>Client</th>
+              <th>Produits</th>
+              <th>Quantités</th>
+              <th>Adresse de livraison</th>
+              <th>Montent de la commande</th>
+              <th>Transporteurs</th>
+              <th>État de la commande</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+          {commandes.map(c => {
               return (
-                <tr>
+                <tr key={c.id}>
                   <td>{c.transaction_id}</td>
-                  <td><button className="button is-primary">Afficher le détail</button></td>
+                  <td>{c.user_mail}</td>
+                  <td>{c.id_products.map(p => {
+                    return (
+                      <span key={p}>fb</span>
+                    )
+                  })}</td>
+                  <td></td>
+                  <td>{c.adresse}, {c.city}, {c.country}</td>
+                  <td>{c.amount}€</td>
+                  <td>Transporteur</td>
+                  <td>État</td>
+                  <td>
+                    <button className="button is-primary">Afficher le détail</button>
+                  </td>
                 </tr>
               )
             })}
-          </thead>
-          <tbody>
-            <tr>
-              <td>05</td>
-              <td>05</td>
-              <td>05</td>
-              <td>05</td>
-              <td>05</td>
-              <td>05</td>
-              <td>05</td>
-              <td>05</td>
-              <td><button className="button is-primary">Afficher le détail</button></td>
-            </tr>
-            <tr>
-              <td>05</td>
-              <td>05</td>
-              <td>05</td>
-              <td>05</td>
-              <td>05</td>
-              <td>05</td>
-              <td>05</td>
-              <td>05</td>
-              <td><button className="button is-primary">Afficher le détail</button></td>
-            </tr>
           </tbody>
         </table>
       </div>
