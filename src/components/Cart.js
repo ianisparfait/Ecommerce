@@ -81,7 +81,7 @@ const Cart = props => {
                 >
                   Effacer le panier
                 </button>{" "}
-                <Stripe price={tPrice == 0 ? totalPrice() : tPrice} />
+                <Stripe price={tPrice == 0 ? totalPrice() : tPrice} datas={cart} />
               </div>
               <span>Prix total de la commande: {tPrice == 0 ? totalPrice() : tPrice}€</span>
             </div>
