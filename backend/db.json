@@ -94,8 +94,17 @@
       "zip_code": "13100",
       "adresse": "3 avenue des tamaris",
       "amount": "37.38",
-      "id_products": [
-        "d680gkfik5gkyyhdxlq"
+      "products": [
+        {
+          "id": "d680gkfik5gkyyhdxlq",
+          "name": "abajour",
+          "qty": "1"
+        },
+        {
+          "id": "sla407he9agkyyheaoj",
+          "name": "Kallax",
+          "qty": "2"
+        }
       ]
     }
   ]

@@ -6,8 +6,6 @@ const Commandes = props => {
   const { commandes } = props.context;
   const commandesKeys = Object.keys(commandes || {});
 
-  console.log(commandes)
-
   return (
     <>
       <div className="hero is-primary">
@@ -37,12 +35,16 @@ const Commandes = props => {
                 <tr key={c.id}>
                   <td>{c.transaction_id}</td>
                   <td>{c.user_mail}</td>
-                  <td>{c.id_products.map(p => {
+                  <td>{c.products.map(p => {
                     return (
-                      <span key={p}>fb</span>
+                      <span key={p.name} style={{display: "block"}}>{p.name}</span>
                     )
                   })}</td>
-                  <td></td>
+                  <td>{c.products.map(p => {
+                    return (
+                        <span key={p.id} style={{display: "block"}}>{p.qty}</span>
+                    )
+                  })}</td>
                   <td>{c.adresse}, {c.city}, {c.country}</td>
                   <td>{c.amount}€</td>
                   <td>Transporteur</td>
