@@ -7,8 +7,6 @@ import AddProduct from './components/AddProduct';
 import Cart from './components/Cart';
 import Login from './components/Login';
 import ProductList from './components/ProductList';
-import Success from './components/Success';
-import Cancel from './components/Cancel';
 import Account from './components/Account';
 import Commandes from './components/Commandes';
 
@@ -218,8 +216,6 @@ export default class App extends Component {
               <Route exact path="/cart" component={Cart} />
               <Route exact path="/add-meuble" component={AddProduct} />
               <Route exact path="/meubles" component={ProductList} />
-              <Route exact path="/success-cart" component={Success} />
-              <Route exact path="/cancel-cart" component={Cancel} />
               <Route exact path="/account" component={Account} />
               <Route exact path="/checkout" component={Stripe} />
               <Route exact path="/commandes" component={Commandes} />
