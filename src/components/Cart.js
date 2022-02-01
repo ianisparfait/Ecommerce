@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 import axios from 'axios';
 import withContext from "../withContext";
 import CartItem from "./CartItem";
@@ -10,6 +10,8 @@ const Cart = props => {
 
   const { cart } = props.context;
   const cartKeys = Object.keys(cart || {});
+
+  console.log()
 
   const totalPrice = (pr) => {
     let c = cart
@@ -52,6 +54,10 @@ const Cart = props => {
     }
   }
 
+  const handleCo = () => {
+    return props.history.push("/login");
+  };
+
 
   return (
     <>
@@ -81,7 +87,7 @@ const Cart = props => {
                 >
                   Effacer le panier
                 </button>{" "}
-                <Stripe price={tPrice == 0 ? totalPrice() : tPrice} datas={cart} />
+                {!props.context.user ? (<button onClick={handleCo} className="button is-success">Se connecter</button>) : (<Stripe price={tPrice == 0 ? totalPrice() : tPrice} datas={cart} />)}
               </div>
               <span>Prix total de la commande: {tPrice == 0 ? totalPrice() : tPrice}€</span>
             </div>
