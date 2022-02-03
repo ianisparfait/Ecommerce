@@ -65,6 +65,15 @@
       "meubleInfo": "sdfg",
       "meubleShortInfo": "sf",
       "meubleType": "sdf"
+    },
+    {
+      "id": "6vb3t50rgskz7a31kn",
+      "meubleName": "marco",
+      "meubleStock": "1",
+      "meublePrix": "10",
+      "meubleInfo": "",
+      "meubleShortInfo": "bel homme",
+      "meubleType": ""
     }
   ],
   "promos": [
@@ -148,6 +157,26 @@
         {
           "id": "taxy3xeburkyymn5ap",
           "name": "ajoutzoruifh",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "id": "o7z86xzietrkz79yaca",
+      "user_mail": "admin@example.com",
+      "user_name": "Ianis Parfait",
+      "type": "card",
+      "transaction_id": "tok_1KP9S6KyFYzC5CCaofB2hma2",
+      "card_id": "card_1KP9S6KyFYzC5CCa4VUYjNPW",
+      "country": "France",
+      "city": "Aix en provence",
+      "zip_code": "13100",
+      "adresse": "3 avenue des tamaris",
+      "amount": 37.38,
+      "products": [
+        {
+          "id": "d680gkfik5gkyyhdxlq",
+          "name": "Abajour",
           "qty": 1
         }
       ]

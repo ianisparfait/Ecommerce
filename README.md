@@ -19,6 +19,6 @@ Pour se connecter:
 
 ## Avec API
 1. Run `npm install`
-2. Connexion à l'API depuis les fichiers: `App.js` & `AddProduct.js`
+2. Connexion à l'API depuis les fichiers: `App.js` & `AddProduct.js` & `Cart.js` & `Account.js`
 3. Run `npm start` pour démarrer le serveur de développement
 4. Se rendre sur [http://localhost:3000/](http://localhost:3000/)
