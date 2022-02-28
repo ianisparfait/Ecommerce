@@ -1,0 +1,22 @@
+
+version: '3'
+services:
+  nodejs-server:
+    build:
+      context: ./backend
+    ports:
+      - "3080:3080"
+    container_name: node-api
+    volumes:
+      - ./backend:/usr/src/app/backend
+      - /usr/src/app/backend/node_modules
+  react-ecommerce:
+    build:
+      context: ./
+    ports:
+      - "3000:3000"
+    container_name: react-ecommerce
+    stdin_open: true
+    volumes:
+      - ./:/usr/src/app/
+      - /usr/src/app/node_modules
